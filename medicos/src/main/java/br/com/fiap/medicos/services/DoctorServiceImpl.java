@@ -19,6 +19,7 @@ public class DoctorServiceImpl implements DoctorService {
     @Autowired
     private DoctorRepository repository;
 
+    //Função que realiza o cadastros direto no banco de dados na camada de repository
     public DoctorResponse save(DoctorEntity doctor){
 
 
@@ -30,12 +31,13 @@ public class DoctorServiceImpl implements DoctorService {
         return new DoctorResponse(doctor);
     }
 
+    //Função que realiza a exclusão direto no banco de dados na camada de repository
     public void delete(String id){
         LOG.info("Removendo Médico: " + id);
         repository.deleteById(id);
     }
 
-
+    //Função que procura um médico direto no banco de dados na camada de repository
     public DoctorResponse find(String id){
         LOG.info("Buscar Médico: " + id);
         DoctorEntity doctorEntity = repository.findById(id).get();

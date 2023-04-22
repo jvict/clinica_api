@@ -20,6 +20,7 @@ public class PacienteServiceImpl implements PacienteService {
     @Autowired
     private PacienteRepository repository;
 
+    //Função que realiza o cadastros direto no banco de dados na camada de repository
     public PacienteResponse save(PacienteEntity paciente){
 
 
@@ -31,12 +32,13 @@ public class PacienteServiceImpl implements PacienteService {
         return new PacienteResponse(paciente);
     }
 
+    //Função que realiza a exclusão direto no banco de dados na camada de repository
     public void delete(String id){
         LOG.info("Removendo Paciente: " + id);
         repository.deleteById(id);
     }
 
-
+    //Função que procura um paciente direto no banco de dados na camada de repository
     public PacienteResponse find(String id){
         LOG.info("Procurar Paciente: " + id);
         PacienteEntity pacienteEntity = repository.findById(id).get();

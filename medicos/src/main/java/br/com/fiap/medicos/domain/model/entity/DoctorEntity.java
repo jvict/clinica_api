@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Table(name = "tbl_doctor")
 public class DoctorEntity implements Serializable {
 
+    //Classe responvel por realizar o merge entre banco e dados recebidos
     @Id
     @Column(name = "id", nullable = false)
     private String id;

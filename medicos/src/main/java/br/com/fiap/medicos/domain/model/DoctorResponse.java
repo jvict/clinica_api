@@ -4,6 +4,7 @@ import br.com.fiap.medicos.domain.model.entity.DoctorEntity;
 
 public class DoctorResponse {
 
+    //Classe responsavel por capturar os dados recebidos no body
     private String id;
     private String nome;
     private String cpf;

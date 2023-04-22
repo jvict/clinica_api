@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 
 public class PacienteResponse {
+    //Classe responsavel por capturar os dados recebidos no body
 
     private String id;
     private String nome;

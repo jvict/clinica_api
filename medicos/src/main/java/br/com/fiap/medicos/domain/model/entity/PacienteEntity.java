@@ -9,6 +9,7 @@ import jakarta.persistence.Table;
 @Table(name = "tbl_paciente")
 public class PacienteEntity {
 
+    //Classe responvel por realizar o merge entre banco e dados recebidos
     @Id
     @Column(name = "id", nullable = false)
     private String id;

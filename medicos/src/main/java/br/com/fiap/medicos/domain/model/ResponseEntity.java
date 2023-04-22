@@ -1,18 +1,18 @@
 package br.com.fiap.medicos.domain.model;
 
-public class ResponseDoctorEntity {
+public class ResponseEntity {
     private Object content;
     private String message;
 
-    public ResponseDoctorEntity(){
+    public ResponseEntity(){
         super();
     }
 
-    public ResponseDoctorEntity(Object content){
+    public ResponseEntity(Object content){
         this.content = content;
     }
 
-    public ResponseDoctorEntity(String message){
+    public ResponseEntity(String message){
         this.message = message;
     }
 
